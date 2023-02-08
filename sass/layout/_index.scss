@@ -1,0 +1,25 @@
+/* Header */
+
+header {
+   display: flex;
+   justify-content: center;
+   height: 30px;
+   padding: 12px 0;
+  
+}
+
+/* Footer */
+
+footer {
+   background-color: $color-05;
+   color: $color-07;
+   svg {
+      color: $color-07;
+   }
+   li {
+      list-style-type: none;
+   }
+   a {
+      color: $color-07;
+   }
+}

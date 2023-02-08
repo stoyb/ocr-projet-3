@@ -1,0 +1,74 @@
+/* First section */
+.bloc-introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-06;
+    padding: 44px 0;
+    text-align: center;
+    > h1{
+        max-width: 275px;
+        font-weight: 700;
+        font-size: 24px;
+        margin: 0;   
+    }
+    &__subtitle{
+        font-weight: 300;
+        max-width: 315px;
+        font-size: 16px;
+    }
+}
+
+.bloc-fonctionnement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__title {
+        margin-left: -140px;
+    }
+}
+.bloc-restaurant {
+    padding: 56px 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bloc-fonctionnement__options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bloc-restaurant {
+    background-color: $color-04;
+}
+.bloc-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 280px;
+    margin-left: -20px;
+    background-color: $color-09;
+    box-shadow: 0 4px 8px rgba(0,0,0,.3);
+    column-gap: 16px; 
+    &__number {
+        color: $color-07;
+        padding: 4px 8px;
+        border-radius: 50px;
+        background-color: $color-01;
+        font-size: 12px;
+    }
+    > span {
+        font-size: 16px;
+        color: $color-08;
+    }
+    &__paragraph--size {
+        font-size:14px;
+    }
+}
