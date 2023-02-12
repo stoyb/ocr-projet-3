@@ -6,6 +6,7 @@
     align-items: center;
     background-color: $color-06;
     padding: 44px 0;
+    width: 102%;
     text-align: center;
     > h1{
         max-width: 275px;
@@ -21,54 +22,66 @@
 }
 
 .bloc-fonctionnement {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     justify-content: center;
-    align-items: center;
-    &__title {
-        margin-left: -140px;
-    }
+    padding-bottom: 56px;
+    margin: 0 auto;
+    width: 102%;
 }
 .bloc-restaurant {
-    padding: 56px 0;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     justify-content: center;
-    align-items: center;
+    width: 102%;
+    background-color: $color-04;
 }
 
 .bloc-fonctionnement__options {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    row-gap: 24px;
+    margin-left: 12px;
 }
 
-.bloc-restaurant {
-    background-color: $color-04;
-}
 .bloc-options {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 280px;
-    margin-left: -20px;
+    width: 288px;
+    height: 72px;
+    border-radius: 20px;
     background-color: $color-09;
-    box-shadow: 0 4px 8px rgba(0,0,0,.3);
-    column-gap: 16px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,.2);
+    &:hover {
+        background-color: $color-10;
+    }
+    &:hover span {
+        color: $color-01; // Pour changer seulement la couleur de l'icône lors du survol de la div //
+    }
     &__number {
         color: $color-07;
-        padding: 4px 8px;
+        padding: 3px 6px;
         border-radius: 50px;
         background-color: $color-01;
-        font-size: 12px;
+        font-size: 10px;
+        position: relative;
+        right: 10px;
+        margin-right: 6px;
+      
     }
     > span {
         font-size: 16px;
         color: $color-08;
+        padding-right: 24px;
+ 
     }
     &__paragraph--size {
-        font-size:14px;
+        font-size:16px;
     }
-}
+    }
+
+    .bloc-options__icon--spacing{
+        padding-right: 20px;
+    }
