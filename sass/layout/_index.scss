@@ -49,9 +49,9 @@ footer {
       flex-direction: row-reverse;
       justify-content: center;
       align-items: baseline;
-      padding-left: 57px;
-      column-gap: 154px;
-      width: 95%;
+      padding-left: 12%;
+      column-gap: 18%;
+      width: 88%;
       img {
          height:18px;
       }
@@ -61,6 +61,17 @@ footer {
          align-items: center;
          column-gap: 16px;
       }
+   }
+}
+
+@media (min-width:992px) {
+   footer {
+       padding-left: 7%;
+       column-gap: 17%;
+       width: 93%;
+
+
+
    }
 }
 

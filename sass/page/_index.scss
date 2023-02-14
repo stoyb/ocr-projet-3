@@ -140,7 +140,18 @@
 
 
     @media (min-width:992px) {
+        .bloc-introduction{
+            > h1 {
+                font-size: 36px;
+            }
+            &__subtitle {
+                font-size: 16px;
+            }
+        }
         .bloc-fonctionnement__options {
             column-gap: 44px;
+        }
+        .bloc-options {
+            width: 284px;
         }
     }
