@@ -1,4 +1,4 @@
-/* First section */
+/* Introduction */
 .bloc-introduction {
     display: flex;
     flex-direction: column;
@@ -88,4 +88,59 @@
 
     .bloc-options__icon--spacing{
         padding-right: 20px;
+    }
+
+    @media (min-width:768px) {
+        /* Introduction */
+        .bloc-introduction{
+            width: 100%;
+            > h1 {
+                font-size: 24px;
+                max-width: 100%;
+            }
+            &__subtitle {
+                max-width: 100%;
+                font-size: 12px;
+                padding-top: 12px;
+                padding-bottom: 8px;
+            }
+        }
+        .btn-introduction--size {
+            font-size: 12px;
+        }
+
+        /* Fonctionnement */
+        .bloc-fonctionnement, .bloc-restaurant {
+            display: grid;
+            justify-items: flex-start;
+            width: 100%;
+        }
+        
+        .bloc-fonctionnement__options {
+            flex-direction: row;
+            column-gap: 24px;
+        }
+
+        .bloc-options {
+            width: 220px;
+            > span {
+               padding-right: 10px; 
+            }
+        }
+
+        /* Restaurants */
+
+        .bloc-restaurant__cards {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 18px;
+        }
+    }
+
+
+    @media (min-width:992px) {
+        .bloc-fonctionnement__options {
+            column-gap: 44px;
+        }
     }

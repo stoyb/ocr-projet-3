@@ -10,3 +10,11 @@
     top: 42px;
     left: 92px ;
 }
+
+@media (min-width:768px) {
+    .new-restaurant-theme {
+        padding: 3px 6px;
+        left: 48px;
+        top:36px;
+    }
+}

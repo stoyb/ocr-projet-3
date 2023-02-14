@@ -53,6 +53,26 @@ footer a {
   padding-right: 6px;
 }
 
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: baseline;
+    padding-left: 57px;
+    column-gap: 154px;
+    width: 95%;
+  }
+  footer img {
+    height: 18px;
+  }
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 16px;
+  }
+}
 /* Search Bar */
 .search-bar {
   background-color: #EAEAEA;
@@ -101,7 +121,7 @@ footer a {
   object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
-.card--margin {
+.card--margin-bottom {
   margin-bottom: 24px;
 }
 
@@ -151,7 +171,30 @@ h3 {
   padding: 0;
 }
 
-/* First section */
+@media (min-width: 768px) {
+  /*Search Bar*/
+  .search-bar {
+    width: 100%;
+  }
+  /* Buttons */
+  .btn-introduction--size {
+    font-size: 12px;
+  }
+  /* Cards */
+  .card {
+    width: 172px;
+  }
+  .card--margin-bottom {
+    margin-bottom: 0;
+  }
+  .card--margin-top {
+    margin-top: 18px;
+  }
+  .card2--margin-bottom {
+    margin-bottom: 20px;
+  }
+}
+/* Introduction */
 .bloc-introduction {
   display: flex;
   flex-direction: column;
@@ -243,6 +286,53 @@ h3 {
   padding-right: 20px;
 }
 
+@media (min-width: 768px) {
+  /* Introduction */
+  .bloc-introduction {
+    width: 100%;
+  }
+  .bloc-introduction > h1 {
+    font-size: 24px;
+    max-width: 100%;
+  }
+  .bloc-introduction__subtitle {
+    max-width: 100%;
+    font-size: 12px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+  }
+  .btn-introduction--size {
+    font-size: 12px;
+  }
+  /* Fonctionnement */
+  .bloc-fonctionnement, .bloc-restaurant {
+    display: grid;
+    justify-items: flex-start;
+    width: 100%;
+  }
+  .bloc-fonctionnement__options {
+    flex-direction: row;
+    column-gap: 24px;
+  }
+  .bloc-options {
+    width: 220px;
+  }
+  .bloc-options > span {
+    padding-right: 10px;
+  }
+  /* Restaurants */
+  .bloc-restaurant__cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 18px;
+  }
+}
+@media (min-width: 992px) {
+  .bloc-fonctionnement__options {
+    column-gap: 44px;
+  }
+}
 .new-restaurant-theme {
   color: #008766;
   background-color: #99E2D0;
@@ -253,6 +343,14 @@ h3 {
   position: relative;
   top: 42px;
   left: 92px;
+}
+
+@media (min-width: 768px) {
+  .new-restaurant-theme {
+    padding: 3px 6px;
+    left: 48px;
+    top: 36px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

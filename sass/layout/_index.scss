@@ -42,5 +42,27 @@ footer {
       padding-right: 6px;
    }
 }
+
+@media (min-width:768px) {
+   footer {
+      display:flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: baseline;
+      padding-left: 57px;
+      column-gap: 154px;
+      width: 95%;
+      img {
+         height:18px;
+      }
+      ul {
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         column-gap: 16px;
+      }
+   }
+}
+
  
 
