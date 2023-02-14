@@ -5,7 +5,15 @@ header {
    justify-content: center;
    height: 30px;
    padding: 12px 0;
-  
+    img {
+      height: 30px;
+   }
+    span {
+      position: absolute;
+      top:17px;
+      left: 20px;
+      color: $color-12;
+   }
 }
 
 /* Footer */
@@ -41,6 +49,10 @@ footer {
    &__icon2 {
       padding-right: 6px;
    }
+}
+
+.footer-restaurant {
+   width:100%
 }
 
 @media (min-width:768px) {

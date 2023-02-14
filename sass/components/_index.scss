@@ -28,15 +28,21 @@
     font-size: 16px;
     color: $color-07;
     box-shadow: 0 4px 8px rgba(0,0,0,.3);
-    &__introduction {
-        padding: 13px 18px;
-        margin-bottom: 20px;
-        &--purple {
-            background: linear-gradient($color-02 15%, $color-01 100%);
-        }
+    &--purple {
+        background: linear-gradient($color-02 15%, $color-01 100%);
     }
-    
+    &__introduction {
+        margin-bottom: 20px;
+        padding: 13px 18px;
+    } 
 }
+
+.btn__order {
+    padding: 14px 42px;
+    display: block;
+    margin: 40px auto;
+}
+
 
 
 .card {
@@ -54,14 +60,15 @@
 }
  
 .card-description {
-    height: 70px;
-    background-color: $color-07;
-    margin: 0;
-    border-radius: 0 0 15px 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    height: 70px;
+    background-color: $color-07;
+    margin: 0;
+    border-radius: 0 0 15px 15px;
+    color: $color-12;
     &__writing {
         display: flex;
         flex-direction: column;
