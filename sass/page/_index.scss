@@ -92,22 +92,21 @@
 }
 
 .bloc-img {
+    position: relative;
+    z-index: 1;
+    height: 282px;
     > img {
         width: 100%;
         height: 316px;
         object-fit: cover;
-        z-index: 2;
-
     } 
 }
-.bloc-main-restaurant {
-    height: 1595px;
-}
+
 
 .bloc-menu {
     position: relative;
-    top:-80px;
-    padding: 30px 20px;
+    z-index: 2;
+    padding: 30px 16px;
     background-color: $color-09;
     border-radius: 25px 25px 0 0;
     &__title {
@@ -115,10 +114,12 @@
         flex-direction: row;
         justify-content: center;
         align-items: baseline;
-        column-gap: 36px;
-        > p {
+        column-gap: 20px;
+        margin-bottom: 40px;
+        > h1 {
             font-family: Shrikhand;
             font-size: 24px;
+            margin: 0;
         }
         > span {
             font-size: 24px;
@@ -130,7 +131,7 @@
 .menu-part {
     display: grid;
     row-gap:12px;
-    margin-top: 40px;
+    margin-bottom: 40px;
 }
 .menu-part__title{
     text-transform: uppercase;
@@ -138,8 +139,8 @@
     margin-bottom: 12px;
     padding: 0;
     span {
-        border-bottom: 2px solid $color-03;
-        padding-bottom: 2px;
+        border-bottom: 3px solid $color-03;
+        padding-bottom: 6px;
     }
 }
 
@@ -157,13 +158,6 @@
         padding-right: 6px;
     }
 }
-
-
-
-
-
-
-
 
 
 
