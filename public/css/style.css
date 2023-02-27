@@ -387,14 +387,39 @@ h3 {
   justify-content: space-between;
   align-items: flex-end;
   width: 95%;
-  padding: 0 12px;
-  padding-top: 12px;
   border-radius: 16px;
   background-color: #FFFFFF;
 }
 .bloc-dish__price {
   font-weight: bold;
   padding-right: 6px;
+}
+
+.bloc-dish__content {
+  padding: 0 12px;
+  padding-top: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.bloc-dish__checked {
+  width: 73px;
+  height: 100%;
+  border-radius: 0 16px 16px 0;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bloc-dish__checked > span {
+  color: #99E2D0;
+  font-size: 18px;
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  padding: 1px 2px;
+  border-radius: 50px;
 }
 
 .bloc-dish-1 {

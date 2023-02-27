@@ -149,13 +149,37 @@
     justify-content: space-between;
     align-items: flex-end;
     width: 95%;
-    padding: 0 12px;
-    padding-top: 12px;
     border-radius: 16px;
     background-color: $color-07;
     &__price {
         font-weight: bold;
         padding-right: 6px;
+    }
+}
+
+.bloc-dish__content {
+    padding: 0 12px;
+    padding-top: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.bloc-dish__checked {
+    width: 73px;
+    height: 100%;
+    border-radius: 0 16px 16px 0;
+    background-color: $color-03;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > span {
+        color: $color-03;
+        font-size: 18px;
+        background-color: $color-07;
+        border: 1px solid $color-07;
+        padding: 1px 2px;
+        border-radius: 50px;
     }
 }
 
@@ -219,8 +243,6 @@
     }
 }
 
-
-
 @keyframes spin {
     from{
         transform: rotate(360deg);
@@ -230,9 +252,6 @@
         display: none;
     }
 }
-
-
-
 
 @media (min-width:768px) {
     /* Introduction */
