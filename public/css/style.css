@@ -397,6 +397,84 @@ h3 {
   padding-right: 6px;
 }
 
+.bloc-dish-1 {
+  animation-duration: 750ms;
+  animation-delay: 100ms;
+  animation-name: glissement;
+  animation-iteration-count: 1;
+}
+
+.bloc-dish-2 {
+  animation-duration: 750ms;
+  animation-delay: 200ms;
+  animation-name: glissement;
+  animation-iteration-count: 1;
+}
+
+.bloc-dish-3 {
+  animation-duration: 750ms;
+  animation-delay: 300ms;
+  animation-name: glissement;
+  animation-iteration-count: 1;
+}
+
+.bloc-dish-4 {
+  animation-duration: 750ms;
+  animation-delay: 400ms;
+  animation-name: glissement;
+  animation-iteration-count: 1;
+}
+
+.bloc-dish-5 {
+  animation-duration: 750ms;
+  animation-delay: 500ms;
+  animation-name: glissement;
+  animation-iteration-count: 1;
+}
+
+.bloc-dish-6 {
+  animation-duration: 750ms;
+  animation-delay: 600ms;
+  animation-name: glissement;
+  animation-iteration-count: 1;
+}
+
+.bloc-dish-7 {
+  animation-duration: 750ms;
+  animation-delay: 700ms;
+  animation-name: glissement;
+  animation-iteration-count: 1;
+}
+
+.bloc-dish-8 {
+  animation-duration: 750ms;
+  animation-delay: 800ms;
+  animation-name: glissement;
+  animation-iteration-count: 1;
+}
+
+.bloc-dish-9 {
+  animation-duration: 750ms;
+  animation-delay: 900ms;
+  animation-name: glissement;
+  animation-iteration-count: 1;
+}
+
+.bloc-dish-10 {
+  animation-duration: 750ms;
+  animation-delay: 1000ms;
+  animation-name: glissement;
+  animation-iteration-count: 1;
+}
+
+@keyframes glissement {
+  from {
+    margin-top: 20%;
+  }
+  to {
+    margin-top: 0%;
+  }
+}
 .bloc-loader:hover {
   opacity: 0.6;
   position: absolute;
