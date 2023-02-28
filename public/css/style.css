@@ -386,7 +386,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width: 95%;
+  width: 100%;
   border-radius: 16px;
   background-color: #FFFFFF;
 }
@@ -404,7 +404,13 @@ h3 {
   align-items: flex-end;
 }
 
-.bloc-dish__checked {
+.bloc-dish__writing {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bloc-dish__content:hover + .bloc-dish__checked {
   width: 73px;
   height: 100%;
   border-radius: 0 16px 16px 0;
@@ -412,16 +418,39 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation-duration: 1s;
+  animation-name: checked;
+  animation-iteration-count: 1;
 }
-.bloc-dish__checked > span {
+.bloc-dish__content:hover + .bloc-dish__checked > span {
   color: #99E2D0;
   font-size: 18px;
   background-color: #FFFFFF;
   border: 1px solid #FFFFFF;
-  padding: 1px 2px;
+  padding: 2px 4px;
   border-radius: 50px;
+  animation-duration: 750ms;
+  animation-name: icon-checked;
+  animation-iteration-count: 1;
 }
 
+.bloc-dish__checked {
+  display: none;
+}
+
+@keyframes checked {
+  from {
+    transform: translate(100%);
+  }
+  to {
+    transform: translate(0%);
+  }
+}
+@keyframes icon-checked {
+  to {
+    transform: rotate(1turn);
+  }
+}
 .bloc-dish-1 {
   animation-duration: 750ms;
   animation-delay: 100ms;
