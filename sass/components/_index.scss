@@ -34,9 +34,7 @@
     cursor: pointer;
     &:hover {
         box-shadow: 0 4px 8px rgba(0,0,0,.6);
-        opacity: .8;
-
-        
+        opacity: .9;
     }
     &__introduction {
         margin-bottom: 20px;
@@ -87,14 +85,14 @@
         margin-right: 21px;
         font-weight: 300;
         color: #000;
-
         cursor: pointer;
-        transition: all .2s ease-in-out;
+        transform: scale(1);
+        // transition: all 2s ease-out;
         &:hover i {
             background: linear-gradient($color-01, $color-02);
-            color: #FFF;
+            color: transparent;
             font-weight: 600;
-            transform: scale(1.2);
+            transform: scale(1.4);
             -webkit-background-clip: text;
             -webkit-text-fill-color:transparent;
         }

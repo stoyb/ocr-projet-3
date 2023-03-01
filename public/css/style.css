@@ -124,7 +124,7 @@ footer a {
 }
 .btn:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .btn__introduction {
   margin-bottom: 20px;
@@ -174,13 +174,13 @@ footer a {
   font-weight: 300;
   color: #000;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transform: scale(1);
 }
 .card-description__heart:hover i {
   background: linear-gradient(#9356DC, #FF79DA);
-  color: #FFF;
+  color: transparent;
   font-weight: 600;
-  transform: scale(1.2);
+  transform: scale(1.4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -549,7 +549,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: load 5s ease-in-out;
+  animation: load 5s ease-in-out forwards;
   background: #FFF;
 }
 .loader::after {
@@ -565,17 +565,19 @@ h3 {
   text-align: center;
 }
 
-.loader-hidden {
-  display: flex;
-}
-
 @keyframes load {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  50% {
     opacity: 0;
-    display: none;
+    background: transparent;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    background: transparent;
+    transform: scale(0);
   }
 }
 @keyframes spin {
