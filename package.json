@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css -w --style compressed",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -12,8 +13,12 @@
   },
   "author": "",
   "license": "ISC",
+  "browserlist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/stoyb/ocr-projet-3/issues"
   },
-  "homepage": "https://github.com/stoyb/ocr-projet-3#readme"
+  "homepage": "https://github.com/stoyb/ocr-projet-3#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.13"
+  }
 }
