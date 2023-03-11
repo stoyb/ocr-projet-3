@@ -42,7 +42,7 @@
     padding-bottom: 44px;
 }
 
-.bloc-fonctionnement__options {
+.bloc-fonctionnement__directions {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -50,7 +50,7 @@
     margin-left: 12px;
 }
 
-.bloc-options {
+.bloc-directions {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -87,7 +87,7 @@
     }
 }
 
-.bloc-options__icon--spacing{
+.bloc-directions__icon--spacing{
     padding-right: 20px;
 }
 
@@ -225,17 +225,6 @@
   }
 }
 
-
-@for $i from 1 through 10 {
-    .bloc-dish-#{$i} {
-        animation-duration: 750ms;
-        animation-delay: $i*100ms;
-        animation-name: glissement;
-        animation-iteration-count: 1;
-
-    }
-  }
-
 @keyframes glissement {
     from {
       margin-top: 20%;
@@ -301,6 +290,20 @@
     }
 }
 
+.new-restaurant-theme {
+    
+    color: $color-11;
+    background-color: $color-03;
+    padding: 5px 10px;
+    margin: auto;
+    font-size: 12px;
+    border-radius: 2px;
+    position: relative;
+    top: 42px;
+    left: 92px ;
+    
+}
+
 @media (min-width:768px) {
     /* Introduction */
     .bloc-introduction{
@@ -316,9 +319,6 @@
                 padding-bottom: 8px;
             }
         }
-        .btn-introduction--size {
-            font-size: 12px;
-        }
 
         /* Fonctionnement */
         .bloc-fonctionnement, .bloc-restaurant {
@@ -327,12 +327,12 @@
             width: 100%;
         }
         
-        .bloc-fonctionnement__options {
+        .bloc-fonctionnement__directions {
             flex-direction: row;
             column-gap: 24px;
         }
 
-        .bloc-options {
+        .bloc-directions {
             width: 220px;
             > span {
                padding-right: 10px; 
@@ -351,6 +351,12 @@
         .bloc-dish__content {
             width: 100%;
         }
+
+        .new-restaurant-theme {
+            padding: 3px 6px;
+            left: 48px;
+            top:36px;
+        }
     }
 
 
@@ -363,10 +369,13 @@
                 font-size: 16px;
             }
         }
-        .bloc-fonctionnement__options {
+        .bloc-fonctionnement__directions {
             column-gap: 44px;
         }
-        .bloc-options {
+        .bloc-directions {
             width: 284px;
+        }
+        .new-restaurant-theme {
+            left: 72px;
         }
     }

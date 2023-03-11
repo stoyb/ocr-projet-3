@@ -1,0 +1,9 @@
+@for $i from 1 through 10 {
+    .bloc-dish-#{$i} {
+        animation-duration: 750ms;
+        animation-delay: $i*100ms;
+        animation-name: glissement;
+        animation-iteration-count: 1;
+
+    }
+  }
