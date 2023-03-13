@@ -279,7 +279,6 @@
 }
 
 .new-restaurant-theme {
-    
     color: $color-11;
     background-color: $color-03;
     padding: 5px 10px;
@@ -297,5 +296,4 @@
     @include desktop {
         left: 72px;
     }
-    
 }

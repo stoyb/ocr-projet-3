@@ -1,26 +1,19 @@
-/*.new-restaurant-theme {
-    
-    color: $color-11;
-    background-color: $color-03;
-    padding: 5px 10px;
-    margin: auto;
-    font-size: 12px;
-    border-radius: 2px;
-    position: relative;
-    top: 42px;
-    left: 92px ;
-}
-
-@media (min-width:768px) {
-    .new-restaurant-theme {
-        padding: 3px 6px;
-        left: 48px;
-        top:36px;
-    }
-}
-
-@media (min-width:992px) {
-    .new-restaurant-theme {
-        left: 72px;
-    }
-}*/
+// .new-restaurant-theme {
+//     color: $color-11;
+//     background-color: $color-03;
+//     padding: 5px 10px;
+//     margin: auto;
+//     font-size: 12px;
+//     border-radius: 2px;
+//     position: relative;
+//     top: 42px;
+//     left: 92px ;
+//     @include tablette {
+//         padding: 3px 6px;
+//         left: 48px;
+//         top:36px;
+//     }
+//     @include desktop {
+//         left: 72px;
+//     }
+// }
