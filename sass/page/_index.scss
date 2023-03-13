@@ -8,36 +8,61 @@
     padding: 44px 0;
     width: 102%;
     text-align: center;
+    @include tablette{
+        width: 100%;
+    }
     > h1{
         max-width: 275px;
         font-weight: 700;
         font-size: 24px;
         margin: 0;   
+        @include tablette{
+            font-size: 24px;
+            max-width: 100%;
+        }
+        @include desktop {
+            font-size: 36px;
+        }
     }
     &__subtitle{
         font-weight: 300;
         max-width: 315px;
         font-size: 16px; 
         padding-bottom: 16px;
+        @include tablette {
+            max-width: 100%;
+            font-size: 12px;
+            padding-top: 12px;
+            padding-bottom: 8px;
+        }
+        @include desktop {
+            font-size: 16px;
+        }
     }
 }
 
-.bloc-fonctionnement {
+.bloc-fonctionnement, .bloc-restaurant {
     display: grid;
     justify-content: center;
+    width: 102%;
+    @include tablette {
+        justify-items: flex-start;
+        width: 100%;
+    }
+}
+.bloc-fonctionnement {
     padding-bottom: 56px;
     margin: 0 auto;
-    width: 102%;
+    
     &__title {
         padding-bottom: 26px;
     }
 }
 
+
+
 .bloc-restaurant {
     margin: 0 auto;
-    display: grid;
-    justify-content: center;
-    width: 102%;
     background-color: $color-04;
     padding-bottom: 44px;
 }
@@ -48,6 +73,14 @@
     align-items: flex-start;
     row-gap: 24px;
     margin-left: 12px;
+    @include tablette {
+        flex-direction: row;
+        column-gap: 24px;
+    }
+    @include desktop {
+        column-gap: 44px;
+    }
+
 }
 
 .bloc-directions {
@@ -60,6 +93,12 @@
     border-radius: 20px;
     background-color: $color-09;
     box-shadow: 0 4px 8px rgba(0,0,0,.2);
+    @include tablette {
+        width: 220px;
+    }
+    @include desktop {
+        width: 284px;
+    }
     &:hover {
         background-color: $color-10;
     }
@@ -76,20 +115,12 @@
         right: 10px;
         margin-right: 6px;
     }
-    > span {
-        font-size: 16px;
-        color: $color-08;
-        padding-right: 24px;
- 
-    }
     &__paragraph--size {
         font-size:16px;
     }
 }
 
-.bloc-directions__icon--spacing{
-    padding-right: 20px;
-}
+
 
 .bloc-img {
     position: relative;
@@ -190,6 +221,9 @@
     animation-duration: 1s;
     animation-name: checked;
     animation-iteration-count: 1;
+    @include tablette {
+        width: 100%;
+    }
     > span {
         color: $color-03;
         font-size: 18px;
@@ -208,31 +242,14 @@
     display: none;
 }
 
-@keyframes checked {
-    from {
-      transform: translate(100%);
-      
-    }
-  
-    to {
-        transform: translate(0%);
-     
-    }
-  }
-@keyframes icon-checked {
-    to{
-        transform: rotate(1turn);
+.bloc-restaurant__cards {
+    @include tablette {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 18px;
   }
 }
-
-@keyframes glissement {
-    from {
-      margin-top: 20%;
-    }
-    to {
-      margin-top: 0%;
-    }
-  }
 
 .loader{
     display: none;
@@ -261,35 +278,6 @@
     }
 }
 
-
-
-@keyframes load {
-    0% {
-       opacity: 1;
-    }
-
-    90% {
-        opacity: 0;
-        background: transparent;
-        transform: scale(1);
-    }
-    100% {
-        opacity: 0;
-        background: transparent;
-        transform: scale(0);
-    }
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0turn) ;
-    }
-    to {
-        transform: rotate(1turn);
-        
-    }
-}
-
 .new-restaurant-theme {
     
     color: $color-11;
@@ -301,81 +289,13 @@
     position: relative;
     top: 42px;
     left: 92px ;
+    @include tablette {
+        padding: 3px 6px;
+        left: 48px;
+        top:36px;
+    }
+    @include desktop {
+        left: 72px;
+    }
     
 }
-
-@media (min-width:768px) {
-    /* Introduction */
-    .bloc-introduction{
-            width: 100%;
-            > h1 {
-                font-size: 24px;
-                max-width: 100%;
-            }
-            &__subtitle {
-                max-width: 100%;
-                font-size: 12px;
-                padding-top: 12px;
-                padding-bottom: 8px;
-            }
-        }
-
-        /* Fonctionnement */
-        .bloc-fonctionnement, .bloc-restaurant {
-            display: grid;
-            justify-items: flex-start;
-            width: 100%;
-        }
-        
-        .bloc-fonctionnement__directions {
-            flex-direction: row;
-            column-gap: 24px;
-        }
-
-        .bloc-directions {
-            width: 220px;
-            > span {
-               padding-right: 10px; 
-            }
-        }
-
-        /* Restaurants */
-
-        .bloc-restaurant__cards {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            column-gap: 18px;
-        }
-
-        .bloc-dish__content {
-            width: 100%;
-        }
-
-        .new-restaurant-theme {
-            padding: 3px 6px;
-            left: 48px;
-            top:36px;
-        }
-    }
-
-
-    @media (min-width:992px) {
-        .bloc-introduction{
-            > h1 {
-                font-size: 36px;
-            }
-            &__subtitle {
-                font-size: 16px;
-            }
-        }
-        .bloc-fonctionnement__directions {
-            column-gap: 44px;
-        }
-        .bloc-directions {
-            width: 284px;
-        }
-        .new-restaurant-theme {
-            left: 72px;
-        }
-    }

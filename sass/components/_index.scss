@@ -18,7 +18,10 @@
             color: $color-05;
             font-size: 16px;
         }
-    }  
+    } 
+    @include tablette {
+            width: 100%;
+    } 
 }
 
 /* Buttons */
@@ -36,14 +39,18 @@
         box-shadow: 0 4px 8px rgba(0,0,0,.6);
         opacity: .9;
     }
-    &__introduction {
-        margin-bottom: 20px;
-        padding: 13px 18px;
-        &--size {
-            font-size: 16px;
-        }
-    } 
 }
+
+.btn__introduction {
+    margin-bottom: 20px;
+    padding: 13px 18px;
+    &--size {
+        font-size: 16px;
+        @include tablette {
+            font-size: 12px;
+        }
+    }
+} 
 
 .btn__order {
     padding: 14px 42px;
@@ -51,19 +58,36 @@
     margin: 10px auto;
 }
 
-
+/* Cards */
 
 .card {
     width: 288px;
     display: grid;
+    @include tablette{
+        width:172px;
+    }
+    @include desktop {
+        width: 228px;
+    }
     > img {
         height: 120px;
         width: 100%;
         object-fit: cover;
         border-radius: 15px 15px 0 0;
     }
+}
+
+.card {
     &--margin-bottom {
         margin-bottom: 24px;
+        @include tablette {
+            margin-bottom: 0;
+        }
+    }
+    &--margin-top {
+        @include tablette {
+            margin-top: 18px;
+        }
     }
 }
  
@@ -86,7 +110,6 @@
 }
 
 
-
 .card-description__writing {
         font-size: 14px;
     h3 {
@@ -103,6 +126,8 @@
         text-overflow: ellipsis;
     }
 }
+
+/* Icons */
 
 .icon__heart {
     font-size: 24px;
@@ -124,52 +149,52 @@
    
 }
 
+header {
+    span {
+        position: absolute;
+        top:17px;
+        left: 20px;
+        color: $color-12;
+     }
+}
+
+.bloc-directions {
+    > span {
+    font-size: 16px;
+    color: $color-08;
+    padding-right: 24px;
+    @include tablette {
+        padding-right: 10px;
+    }
+  }
+}
+
+.bloc-directions__icon--spacing{
+    padding-right: 20px;
+}
+
+
+.bloc-footer {
+    &__icon1 {
+       padding-right: 11px;
+    }
+    &__icon2 {
+       padding-right: 6px;
+    }
+ }
+
+/* Titles */
+
 h2 {
     font-size:20px;
     margin: 0;
     padding-top: 38px;
     text-align: left;
-
 }
 
 h3 {
     margin: 0;
     padding: 0;
-    
-}
-
-@media (min-width:768px) {
-    /* Search Bar */
-    .search-bar {
-        width: 100%;
-    }
-
-    /* Buttons */
-    .btn-introduction--size {
-        font-size: 12px;
-    } 
-
-    /* Cards */
-    .card {
-        width:172px;
-        &--margin-bottom {
-            margin-bottom: 0;
-        }
-        &--margin-top {
-            margin-top: 18px;
-        }
-
-    }
-
-    .card2--margin-bottom {
-        margin-bottom: 20px;
-    }
-}
-
-@media (min-width:992px) {
-    .card {
-        width: 228px;
-    }
 }
 
 
