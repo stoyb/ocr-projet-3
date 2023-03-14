@@ -145,6 +145,10 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color:transparent;
     }
+    &--margin {
+        margin-right: 0;
+        padding-right: 0 !important;
+    }
    
 }
 

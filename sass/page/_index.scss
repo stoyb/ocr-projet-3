@@ -182,12 +182,50 @@
 .bloc-dish__content {
     padding: 0 12px;
     padding-top: 12px;
-    width: 95%;
+    width: 93%;
     display: flex;
     justify-content: inherit;
     align-items: flex-end;
     @include tablette {
         width: 100%;
+    }
+}
+
+$width: 73% 75% 86% 90% 95% 97% 102%;
+.bloc-dish__content {
+    &--width-1 {
+        width: nth($width, 4);
+    }
+    &--width-2 {
+        width: nth($width, 5);
+        @include tablette {
+            width: nth($width, 6);
+        }
+    }
+    &--width-3 {
+        width: nth($width, 1);
+    }
+    &--width-4 {
+        width: nth($width, 5);
+        @include tablette {
+            width: nth($width, 6);
+        }
+    }
+    &--width-5 {
+        width: nth($width, 7);
+    }
+}
+.bloc-dish {
+    &:hover > .bloc-dish__content {
+        &--width-a {
+            width: nth($width, 2);
+            @include tablette {
+                width: nth($width, 3);
+            }
+            @include desktop {
+                width: nth($width, 4);
+            }
+        }
     }
 }
 
@@ -229,6 +267,7 @@
 
 .bloc-dish__checked {
     display: none;
+    
 }
 
 .bloc-restaurant__cards {
