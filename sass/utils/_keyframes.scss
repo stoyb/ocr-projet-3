@@ -1,3 +1,4 @@
+/* Animation de validation des plats */
 @keyframes checked {
     from {
       transform: translate(100%);
@@ -9,14 +10,13 @@
      
     }
   }
-
-
 @keyframes icon-checked {
     to{
         transform: rotate(1turn);
   }
 }
 
+/* Animation de validation des plats */
 @keyframes glissement {
     from {
       margin-top: 20%;
@@ -26,6 +26,7 @@
     }
 }
 
+/* Animation du loading spinner */
 @keyframes load {
     0% {
        opacity: 1;

@@ -1,0 +1,28 @@
+/* Placeholder bloc-fonctionnement & bloc-restaurant */
+%home-bloc {
+    display: grid;
+    justify-content: center;
+    width: 102%;
+    @include tablette {
+        justify-items: flex-start;
+        width: 100%;
+    }
+}
+
+/* Placeholder flex-row */
+%flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Placeholder flex-column */
+%flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Placeholder ellipsis pour couper les textes longs en trois petits points */
+%ellipsis {
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}

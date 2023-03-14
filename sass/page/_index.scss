@@ -1,7 +1,8 @@
+                                /* Page d'accueil */
+
 /* Introduction */
 .bloc-introduction {
-    display: flex;
-    flex-direction: column;
+    @extend %flex-column;
     justify-content: center;
     align-items: center;
     background-color: $color-06;
@@ -41,35 +42,26 @@
     }
 }
 
-.bloc-fonctionnement, .bloc-restaurant {
-    display: grid;
-    justify-content: center;
-    width: 102%;
-    @include tablette {
-        justify-items: flex-start;
-        width: 100%;
-    }
-}
+/* Fonctionnement */
 .bloc-fonctionnement {
     padding-bottom: 56px;
     margin: 0 auto;
-    
+    @extend %home-bloc;
     &__title {
         padding-bottom: 26px;
     }
 }
 
-
-
+/* Restaurant */
 .bloc-restaurant {
     margin: 0 auto;
     background-color: $color-04;
     padding-bottom: 44px;
+    @extend %home-bloc;
 }
 
 .bloc-fonctionnement__directions {
-    display: flex;
-    flex-direction: column;
+    @extend %flex-column;
     align-items: flex-start;
     row-gap: 24px;
     margin-left: 12px;
@@ -84,8 +76,7 @@
 }
 
 .bloc-directions {
-    display: flex;
-    flex-direction: row;
+    @extend %flex-row;
     justify-content: flex-start;
     align-items: center;
     width: 288px;
@@ -120,7 +111,7 @@
     }
 }
 
-
+                            /* Pages restaurants */
 
 .bloc-img {
     position: relative;
@@ -141,8 +132,7 @@
     background-color: $color-09;
     border-radius: 25px 25px 0 0;
     &__title {
-        display: flex;
-        flex-direction: row;
+        @extend %flex-row;
         justify-content: center;
         align-items: baseline;
         column-gap: 20px;
@@ -196,6 +186,9 @@
     display: flex;
     justify-content: inherit;
     align-items: flex-end;
+    @include tablette {
+        width: 100%;
+    }
 }
 
 .bloc-dish__writing {
@@ -203,8 +196,7 @@
     white-space: nowrap;
     max-width: 60%;
     p, h3 {
-        overflow: hidden;
-        text-overflow: ellipsis;
+        @extend %ellipsis;
     }
 }
 
@@ -221,9 +213,6 @@
     animation-duration: 1s;
     animation-name: checked;
     animation-iteration-count: 1;
-    @include tablette {
-        width: 100%;
-    }
     > span {
         color: $color-03;
         font-size: 18px;

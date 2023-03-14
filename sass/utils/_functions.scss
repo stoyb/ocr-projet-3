@@ -1,3 +1,4 @@
+/* Boucle pour l'animation de l'arrivée retardée des plats  */
 @for $i from 1 through 10 {
     .bloc-dish-#{$i} {
         animation-duration: 750ms;

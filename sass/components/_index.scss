@@ -46,9 +46,6 @@
     padding: 13px 18px;
     &--size {
         font-size: 16px;
-        @include tablette {
-            font-size: 12px;
-        }
     }
 } 
 
@@ -92,8 +89,7 @@
 }
  
 .card-description {
-    display: flex;
-    flex-direction: row;
+    @extend %flex-row;
     justify-content: space-between;
     align-items: center;
     height: 70px;
@@ -102,8 +98,7 @@
     border-radius: 0 0 15px 15px;
     color: $color-12;
     &__writing {
-        display: flex;
-        flex-direction: column;
+        @extend %flex-column;
         justify-content: flex-start;
         padding: 12px;
     }
@@ -115,15 +110,19 @@
     h3 {
         font-weight: 700;
         padding: 4px 0;
-        overflow: hidden; 
-        text-overflow: ellipsis;
+        @extend %ellipsis;
         
     }
     p {
         font-weight: 300;
         margin: 0;
-        overflow: hidden; 
-        text-overflow: ellipsis;
+       @extend %ellipsis;
+    }
+}
+
+.card2--margin-bottom {
+    @include tablette{
+        margin-bottom: 20px;
     }
 }
 
